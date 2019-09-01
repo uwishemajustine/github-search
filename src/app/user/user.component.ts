@@ -1,21 +1,21 @@
 import { Component, OnInit,EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { User } from '../user';
-// import { ProfileService } from '../profile-http/profile-request.service'
-import { ProfileRequestService} from '../profile-http/profile-request.service'
+
+// import { ProfileRequestService} from '../profile-http/profile-request.service'
 
 @Component({
-  selector: 'app-users',
-  templateUrl: './users.component.html',
-  styleUrls: ['./users.component.css']
+  selector: 'app-user',
+  templateUrl: './user.component.html',
+  styleUrls: ['./user.component.css']
 })
-export class UsersComponent implements OnInit {
+export class UserComponent implements OnInit {
 
   file: User;
 
   
 
-  constructor(public http: HttpClient, public profileService: ProfileRequestService ) {
+  constructor(public http: HttpClient ) {
         
    }
 
