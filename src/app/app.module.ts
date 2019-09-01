@@ -15,6 +15,7 @@ import { RepositoryComponent } from './repository/repository.component';
     UserComponent,
     NavbarComponent,
     RepositoryComponent,
+   
     
   ],
   imports: [
