@@ -1,1 +1,51 @@
-<p>repository works!</p>
+<div class="wrapper">
+
+    <div class="container-fluid">
+        <h4 class="style2">Repositories</h4>
+        <hr class="style2">
+        
+        <div class="row">
+  
+          <div class="container-fluid search">
+            
+            <form class="form-inline">
+              <input class="form-control mr-sm-2" type="text" placeholder="Repository" aria-label="Search" [(ngModel)]="reponame" name = "reponame" (keyup)= "searchRepo()">
+              <button class="btn btn-outline-info my-2 my-sm-0" type="submit"> <i class="fas fa-search"></i>Search</button>
+            </form>
+            <p class="searchtext">Enter Repository name to search for github profile</p>
+          </div>
+        
+          <div class="col-md-6" *ngFor="let repo of repos['items']">
+    
+            <div class="cards repocard" >
+              <div class="card-header">
+  
+                <h5 class = "card-title inline" appFont>
+                    {{repo['name']}}
+                </h5>
+  
+                <span class="badge badge-info">
+                  <i class="fas fa-code-branch"></i>Forks
+                  <span class="spacing">{{repo['forks']}}</span>
+                </span>
+              </div>
+              <div class="card-body">
+                  <p>
+                      {{repo['description']}}
+                  </p>
+                  <p>
+                    {{repo['created_at'] | date}} 
+                  </p>
+                  <a href="{{repo.html_url}}" target="_blank" class= "btn btn-primary btn-sm"  >View on Github</a>
+              </div> 
+            </div>
+          </div>
+        </div>
+  
+      
+        <div class="loadMore">
+          <button class="btn btn-outline-info my-2 my-sm-0 loadMore" (click)=loadMore()>Load More</button>
+        </div>
+        
+    </div>
+  </div>

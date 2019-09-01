@@ -2,13 +2,25 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import { User} from '../user'
-
+import { Repository } from '../repository'
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class ProfileRequestService {
+  getReposInfo(): any {
+    throw new Error("Method not implemented.");
+  }
+  updateRepository(reponame: string): any {
+    throw new Error("Method not implemented.");
+  }
+  getRepositoryInfo(): any {
+    throw new Error("Method not implemented.");
+  }
+  updateShow(show: number): any {
+    throw new Error("Method not implemented.");
+  }
   updateUsers(username: string): any {
     throw new Error("Method not implemented.");
   }
@@ -33,6 +45,7 @@ file:User;
       avatar_url: any;
      }
 
+     
      let promise = new Promise((resolve) =>{
       this.http.get<ApiResu>("https://api.github.com/users/" + this.file + "?access_token=" + environment.apiUrl).toPromise().then(resu=>{
         this.file.login = resu.username

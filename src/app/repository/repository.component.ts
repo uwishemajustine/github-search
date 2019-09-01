@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ProfileRequestService } from '../profile-http/profile-request.service';
+import { Repository } from '../repository'
 @Component({
   selector: 'app-repository',
   templateUrl: './repository.component.html',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RepositoryComponent implements OnInit {
 
-  constructor() { }
+  repos:Repository;
+  reponame:string;
+  show:number;
+
+
+   constructor(private ProfileRequestService: ProfileRequestService) { 
+  
+   }
+  
+
 
   ngOnInit() {
   }
-
 }
