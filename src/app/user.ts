@@ -1,5 +1,5 @@
 export class User {
-  Repository: number;
-    constructor(public login:string, public bio: string, public repos:number ,public created_at:Date, public followers:number ,public following:number, public avatar_url: string){
+  
+    constructor(public login:string, public bio: string, public public_repos:number ,public created_at:Date, public followers:number ,public following:number, public avatar_url: string){
     }
 }           

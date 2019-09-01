@@ -24,7 +24,7 @@ export class UserComponent implements OnInit {
     interface ApiResu{
       login:string;
       bio : string;
-      repos:number;
+      public_repos:number;
       created_at:Date;
       followers:number;
       following:number;

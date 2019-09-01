@@ -9,3 +9,11 @@
     height: 40px;
     font-size: 20px; 
 }
+#response{
+    float: center;
+}
+#names{
+    float: center;
+    margin: 50px;
+
+}

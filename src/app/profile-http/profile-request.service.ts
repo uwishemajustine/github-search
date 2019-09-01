@@ -20,7 +20,7 @@ file:User;
      interface ApiResu{
       username:string;
       bio : string;
-      Repository:number;
+      repos:number;
       created_at:Date;
       followers:number;
       following:number;
@@ -32,7 +32,7 @@ file:User;
       this.http.get<ApiResu>("https://api.github.com/users/" + this.file + "?access_token=" + environment.apiUrl).toPromise().then(resu=>{
         this.file.login = resu.username
         this.file.bio = resu.bio
-        this.file.Repository = resu.Repository
+        this.file.public_repos = resu.repos
         this.file.created_at = resu.created_at
         this.file.followers = resu.followers
         this.file.following = resu.following

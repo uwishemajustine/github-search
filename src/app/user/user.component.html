@@ -3,15 +3,16 @@
 Username: <input type="text" class="put" [(ngModel)]=username>
 <button class="butt" (click)="finduser()">Search</button>
  </div> 
-<div *ngIf="result">
+<div *ngIf="result" >
   <br><br>  
-<img src="{{result.avatar_url}}" alt="Justine"><br>
+<img src="{{result.avatar_url}}" alt="Justine" id="response">
 
-<p class="mb-0">Username:{{result.login}}</p>
-<p class="mb-0">Bio:{{result.bio}}</p>
-<p class="mb-0">Repository:{{result.repos}}</p>
-<p class="mb-0">Created_at:{{result.created_at}}</p> 
-<p class="mb-0">Followers:{{result. followers}}</p>
-<p class="mb-0">Following:{{result.following}}</p>
-
+<div id="names" style="margin-right: 30px;">
+<p class="mb-0"><bold>Username:</bold>{{result.login}}</p>
+<p class="mb-0"><bold>Bio:</bold>{{result.bio}}</p>
+<p class="mb-0"><bold>Repository:</bold>{{result.public_repos}}</p>
+<p class="mb-0"><bold>Created_at:</bold>{{result.created_at}}</p> 
+<p class="mb-0"><bold>Followers:</bold>{{result. followers}}</p>
+<p class="mb-0"><bold>Following:</bold>{{result.following}}</p>
+</div>
 </div>
