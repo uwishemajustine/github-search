@@ -9,16 +9,9 @@ Username: <input type="text" class="put" [(ngModel)]=username>
 
 <p class="mb-0">Username:{{result.login}}</p>
 <p class="mb-0">Bio:{{result.bio}}</p>
-<p class="mb-0">Repos:{{result.repos}}</p>
+<p class="mb-0">Repository:{{result.repos}}</p>
 <p class="mb-0">Created_at:{{result.created_at}}</p> 
 <p class="mb-0">Followers:{{result. followers}}</p>
 <p class="mb-0">Following:{{result.following}}</p>
-
-</div>
-<div class="col-sm-6">
-    <ul class="list-group">
-        <!-- <li class="list-group-item" *ngIf="result.bio">{{result.bio}}</li> -->
-        <li class="list-group-item" *ngIf="result.blog"><a href="{{result.blog}}" target="_blank">{{result.blog}}</a></li>
-    </ul>
 
 </div>

@@ -10,10 +10,10 @@ import { User } from '../user';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-
+  
   username: string = "";
   result : any;
- 
+  repos : any;
 
   constructor(public http: HttpClient ) {
         
@@ -21,20 +21,22 @@ export class UserComponent implements OnInit {
 
   ngOnInit() {
 
-  //   interface ApiResu{
-  //     login:string;
-  //     bio : string;
-  //     repos:number;
-  //     created_at:Date;
-  //     followers:number;
-  //     following:number;
-  //     avatar_url: any;
-   }
+    interface ApiResu{
+      login:string;
+      bio : string;
+      repos:number;
+      created_at:Date;
+      followers:number;
+      following:number;
+      avatar_url: any;
+    }
+  }
    finduser() {
-  this.http.get('https://api.github.com/users/' + this.username + "?access_token=39a70f774b971a7334639b758a7354261df36d50")
+  this.http.get('https://api.github.com/users/' + this.username + "?access_token=39a70f774b971a7334639b758a7354261df36d50" )
   .subscribe((result) =>{
       this.result = result;
       console.log(this.result);
   })
+
 }
 }

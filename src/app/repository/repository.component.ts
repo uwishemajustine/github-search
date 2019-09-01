@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProfileRequestService } from '../profile-http/profile-request.service';
 import { Repository } from '../repository'
+
 @Component({
   selector: 'app-repository',
   templateUrl: './repository.component.html',
@@ -8,17 +9,29 @@ import { Repository } from '../repository'
 })
 export class RepositoryComponent implements OnInit {
 
-  repos:Repository;
-  reponame:string;
-  show:number;
+  repository: Repository;
+    public searchRepo: string;
+    public resultCount = 12;
 
+    searchRepos() {
+        this.searchRepo = '';
+        this.resultCount = 10;
+        this.getDataFunction();
 
-   constructor(private ProfileRequestService: ProfileRequestService) { 
-  
-   }
-  
+    }
 
+    constructor(public ProfileRequestService: ProfileRequestService ) { }
 
   ngOnInit() {
+        this.resultCount = 5;
+     
   }
+
+
+      getDataFunction() {
+          // this.ProfileRequestService.gitRepository(this.searchRepo);
+
+      }
+
+
 }

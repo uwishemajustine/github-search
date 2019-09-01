@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiUrl:"https://api.github.com/users/daneden?access_token=39a70f774b971a7334639b758a7354261df36d50"
+  apiUrl:"https://api.github.com/users/daneden?access_token=39a70f774b971a7334639b758a7354261df36d50",
+  myApi:"https://api.github.com/search/repositories?q="
 };
 
 /*

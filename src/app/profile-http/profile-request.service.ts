@@ -1,33 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
-import { User} from '../user'
-import { Repository } from '../repository'
+import { User} from '../user';
+
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class ProfileRequestService {
-  getReposInfo(): any {
-    throw new Error("Method not implemented.");
-  }
-  updateRepository(reponame: string): any {
-    throw new Error("Method not implemented.");
-  }
-  getRepositoryInfo(): any {
-    throw new Error("Method not implemented.");
-  }
-  updateShow(show: number): any {
-    throw new Error("Method not implemented.");
-  }
-  updateUsers(username: string): any {
-    throw new Error("Method not implemented.");
-  }
-  getProfileInfo(): any {
-    throw new Error("Method not implemented.");
-  }
-
+ 
 file:User;
 
   constructor(public http: HttpClient ) {
@@ -38,7 +20,7 @@ file:User;
      interface ApiResu{
       username:string;
       bio : string;
-      repos:number;
+      Repository:number;
       created_at:Date;
       followers:number;
       following:number;
@@ -50,7 +32,7 @@ file:User;
       this.http.get<ApiResu>("https://api.github.com/users/" + this.file + "?access_token=" + environment.apiUrl).toPromise().then(resu=>{
         this.file.login = resu.username
         this.file.bio = resu.bio
-        this.file.repos = resu.repos
+        this.file.Repository = resu.Repository
         this.file.created_at = resu.created_at
         this.file.followers = resu.followers
         this.file.following = resu.following
@@ -63,4 +45,8 @@ file:User;
     })
     return promise
   }
+
 }
+
+
+
