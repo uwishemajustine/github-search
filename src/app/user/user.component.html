@@ -1,1 +1,16 @@
-<p>user works!</p>
+<br><br>
+<div class="form-group">
+Username: <input type="text" class="put"[(ngModel)] = "userName">
+<button class="butt" (click)="findprofile()"><i class= "fa-fa-search"></i>Search</button>
+    <div *ngIf="file">
+  <br><br>  
+<img src="{{file.avatar_url}}" alt="Justine"><br>
+
+<p class="mb-0">Username:  {{file.login}}</p>
+<p class="mb-0">Bio:  {{file.bio}}</p>
+<p class="mb-0">Repos:  {{file.repos}}</p>
+<p class="mb-0">Created_at:  {{file.created_at}}</p> 
+<p class="mb-0">Followers:  {{file. followers}}</p>
+<p class="mb-0">Following:  {{file.following}}</p>
+
+</div>
