@@ -1,11 +1,14 @@
 <br><br>
+
 <div class="form-group">
         <link href="https://fonts.googleapis.com/css?family=Lobster+Two|Sacramento|Tangerine&display=swap" rel="stylesheet">
+        
 <input type="text" class="put" [(ngModel)]=username>
 <button class="butt" (click)="finduser()"  style="text-align:center">Search</button>
- </div> 
+ 
 <div *ngIf="result" id="response">
-  <br><br>  
+  <br><br> 
+
 <img src="{{result.avatar_url}}" alt="Justine" id="response">
 
 <div id="names" style="margin-right: 30px;">
@@ -15,5 +18,6 @@
 <p class="mb-0"><b>Created_at:</b>{{result.created_at}}</p> 
 <p class="mb-0"><b>Followers:</b>{{result. followers}}</p>
 <p class="mb-0"><b>Following:</b>{{result.following}}</p>
+ 
 </div>
-</div>
+<a href="{{result.html_url}}"><button class="btn btn primary" id="repo">View Repository</button></a>

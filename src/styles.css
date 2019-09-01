@@ -3,3 +3,7 @@
 title{
     font-family: 'Great Vibes', cursive;
 }
+body{
+    background-image: url("https://i.dailymail.co.uk/i/pix/2016/11/02/15/39FD647300000578-0-image-a-15_1478101071773.jpg");
+    background-size: cover;
+}
