@@ -11,6 +11,8 @@ import { User} from '../user';
 export class ProfileRequestService {
  
 file:User;
+  gitRepo: any;
+  gitRepos: any;
 
   constructor(public http: HttpClient ) {
     this.file = new User("","",0,new Date(),0,0,"")
@@ -25,6 +27,7 @@ file:User;
       followers:number;
       following:number;
       avatar_url: any;
+      pipeDate:any;
      }
 
      
@@ -37,7 +40,7 @@ file:User;
         this.file.followers = resu.followers
         this.file.following = resu.following
         this.file.avatar_url = resu.avatar_url
-
+        // this.file.pipeDate = resu.pipeDate
         resolve()
       },
      
