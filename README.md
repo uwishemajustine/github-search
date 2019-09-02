@@ -7,7 +7,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 ## Description
-Github Finder is a web application that uses the GitHub API to perform searches on GitHub and display the results to the user.
+Github Search is a web application that uses the GitHub API to perform searches on GitHub and display the results to the user.
 
 ## Technologies Used
 HTML
